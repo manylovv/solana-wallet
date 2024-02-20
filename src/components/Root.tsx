@@ -17,11 +17,16 @@ import {
 import { clusterApiUrl } from '@solana/web3.js';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
-import './App.css';
+import '../App.css';
+import { App } from './App';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Balance } from './Balance';
+
+const queryClient = new QueryClient();
 
 // Default styles that can be overridden by your app
 
-export const App = () => {
+export const Root = () => {
   // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
   const network = WalletAdapterNetwork.Devnet;
 
@@ -56,12 +61,21 @@ export const App = () => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          <div className="flex items-center justify-between p-4">
-            <span className="text-2xl font-semibold pl-2">Logo</span>
-            <WalletMultiButton />
-          </div>
-          {/* <WalletDisconnectButton /> */}
-          {/* Your app's components go here, nested within the context providers. */}
+          <QueryClientProvider client={queryClient}>
+            <div className="flex items-center justify-between p-4">
+              <span className="text-2xl font-semibold pl-2">Logo</span>
+
+              <div className="flex gap-2 items-center justify-center">
+                <Balance />
+                <WalletMultiButton />
+              </div>
+            </div>
+
+            <App />
+
+            {/* <WalletDisconnectButton /> */}
+            {/* Your app's components go here, nested within the context providers. */}
+          </QueryClientProvider>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
