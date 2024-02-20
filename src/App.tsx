@@ -5,8 +5,11 @@ import {
 } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
+  LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
+  SolongWalletAdapter,
+  TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import {
   WalletModalProvider,
@@ -43,6 +46,8 @@ export const App = () => {
       // new UnsafeBurnerWalletAdapter(),
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
+      new TorusWalletAdapter(),
+      new LedgerWalletAdapter(),
     ],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [network]
