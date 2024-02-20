@@ -8,7 +8,6 @@ import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  SolongWalletAdapter,
   TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import {
