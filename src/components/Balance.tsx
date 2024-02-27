@@ -10,7 +10,7 @@ export const Balance = () => {
 
   return (
     <div className="pl-3 pr-3.5 flex items-center justify-center w-fit gap-[7px] h-10 rounded-full shadow-[inset_0_0_0_1px_#4a4a4b,_0px_2px_4px_rgba(0,_0,_0,_0.02)]">
-      <div className="flex items-center justify-center p-[5px] rounded-full bg-black/90 size-6">
+      <div className="flex items-center justify-center p-[2px] rounded-full size-6">
         <img src={solanaLogo} alt="Solana logo" className="size-4" />
       </div>
 
