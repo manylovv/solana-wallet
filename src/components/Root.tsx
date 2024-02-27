@@ -62,16 +62,20 @@ export const Root = () => {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <QueryClientProvider client={queryClient}>
-            <div className="flex items-center justify-between p-4">
-              <span className="text-2xl font-semibold pl-2">Logo</span>
+            <main className="bg-black min-h-screen text-white flex flex-col">
+              <header>
+                <nav className="flex items-center justify-between p-4">
+                  <span className="text-2xl font-semibold pl-2">Logo</span>
 
-              <div className="flex gap-2 items-center justify-center">
-                <Balance />
-                <WalletMultiButton />
-              </div>
-            </div>
+                  <div className="flex gap-2 items-center justify-center">
+                    <Balance />
+                    <WalletMultiButton />
+                  </div>
+                </nav>
+              </header>
 
-            <App />
+              <App />
+            </main>
 
             {/* <WalletDisconnectButton /> */}
             {/* Your app's components go here, nested within the context providers. */}

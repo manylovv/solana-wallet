@@ -1,8 +1,8 @@
 .wallet-adapter-button.wallet-adapter-button-trigger {
   all: unset;
 
-  @apply text-gray-800 px-3 flex items-center justify-center h-10 rounded-xl hover:!bg-gray-100;
+  @apply text-white pl-3 pr-3.5 flex items-center justify-center h-10 rounded-full;
 
   transition: color 100ms ease 0s, background, box-shadow, border-radius;
-  box-shadow: inset 0 0 0 1px #e9eaec, 0px 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 0 1px #4a4a4b, 0px 2px 4px rgba(0, 0, 0, 0.02);
 }
