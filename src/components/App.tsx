@@ -84,7 +84,7 @@ export const App = () => {
         {signature && (
           <a
             className="text-lg py-4 hover:underline underline-offset-4"
-            href={`https://explorer.solana.com/tx/${signature}?cluster=devnet`}
+            href={`https://explorer.solana.com/tx/${signature}?cluster=testnet`}
             target="_blank"
           >
             Go To Explorer - {signature.slice(0, 6)}...{signature.slice(-6)}
