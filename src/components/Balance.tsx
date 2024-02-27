@@ -16,7 +16,7 @@ export const Balance = () => {
 
       <div className="flex gap-[0.4ch] items-center justify-center">
         {isBalanceLoading ? (
-          <div className="animate-pulse bg-gray-200 h-[18px] w-[33.5px] inline-block pt-0.5 rounded-xl"></div>
+          <div className="animate-pulse bg-gray-600 h-[18px] w-[33.5px] inline-block pt-0.5 rounded-xl"></div>
         ) : (
           <span className="font-medium">{balance?.sol.toFixed(2)}</span>
         )}
