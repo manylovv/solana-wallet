@@ -68,9 +68,10 @@ export const App = () => {
       <div className="flex flex-col gap-2 items-center">
         <div className="flex gap-2 items-center justify-center flex-wrap">
           <input
-            className="border border-gray-600 text-lg h-10 rounded-full px-4 focus:outline-none bg-transparent focus:border-white"
+            className="border border-gray-600 placeholder:text-gray-600 text-lg h-10 rounded-full px-4 focus:outline-none bg-transparent focus:border-white"
             value={field}
             onChange={(e) => setField(e.target.value)}
+            placeholder="Enter memo here..."
           />
           <button
             onClick={() => onClick(field)}
