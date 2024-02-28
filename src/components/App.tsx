@@ -1,3 +1,4 @@
+import { NETWORK } from '@/data/network';
 import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import {
@@ -84,7 +85,7 @@ export const App = () => {
         {signature && (
           <a
             className="text-lg py-4 hover:underline underline-offset-4"
-            href={`https://explorer.solana.com/tx/${signature}?cluster=testnet`}
+            href={`https://explorer.solana.com/tx/${signature}?cluster=${NETWORK}`}
             target="_blank"
           >
             Go To Explorer - {signature.slice(0, 6)}...{signature.slice(-6)}

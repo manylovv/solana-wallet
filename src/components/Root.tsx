@@ -3,7 +3,6 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
@@ -21,17 +20,13 @@ import '../App.css';
 import { App } from './App';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Balance } from './Balance';
+import { NETWORK } from '@/data/network';
 
 const queryClient = new QueryClient();
 
-// Default styles that can be overridden by your app
-
 export const Root = () => {
-  // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
-  const network = WalletAdapterNetwork.Testnet;
-
   // You can also provide a custom RPC endpoint.
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  const endpoint = useMemo(() => clusterApiUrl(NETWORK), []);
 
   const wallets = useMemo(
     () => [
@@ -53,8 +48,7 @@ export const Root = () => {
       new TorusWalletAdapter(),
       new LedgerWalletAdapter(),
     ],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [network]
+    []
   );
 
   return (
@@ -62,7 +56,7 @@ export const Root = () => {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <QueryClientProvider client={queryClient}>
-            <main className="bg-black min-h-screen text-white flex flex-col">
+            <div className="min-h-screen text-white flex flex-col">
               <header>
                 <nav className="flex items-center justify-between p-4">
                   <span className="text-2xl font-semibold pl-2">Logo</span>
@@ -75,10 +69,7 @@ export const Root = () => {
               </header>
 
               <App />
-            </main>
-
-            {/* <WalletDisconnectButton /> */}
-            {/* Your app's components go here, nested within the context providers. */}
+            </div>
           </QueryClientProvider>
         </WalletModalProvider>
       </WalletProvider>
