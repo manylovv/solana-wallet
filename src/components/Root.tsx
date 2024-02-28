@@ -62,6 +62,7 @@ export const Root = () => {
                   <span className="text-2xl font-semibold pl-2">Logo</span>
 
                   <div className="flex gap-2 items-center justify-center">
+                    <Balance mintAddress="FHr3nCqWERMXcAb2osGx3Q9xascZj2iqyYDnygV4YsY" />
                     <Balance />
                     <WalletMultiButton />
                   </div>
