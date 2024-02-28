@@ -6,7 +6,7 @@ export const Balance = ({ mintAddress }: { mintAddress?: string }) => {
     mintAddress ?? null
   );
 
-  if (isBalanceError) {
+  if (isBalanceError || (mintAddress && isBalanceLoading)) {
     return null;
   }
 
