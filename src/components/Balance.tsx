@@ -1,5 +1,5 @@
 import { useBalance } from '@/hooks/use-balance';
-import solanaLogo from '@/assets/images/solana.svg';
+import solanaLogo from '@/assets/images/solana-logo-icon.svg';
 
 export const Balance = ({ mintAddress }: { mintAddress?: string }) => {
   const { balance, isBalanceLoading, isBalanceError } = useBalance(

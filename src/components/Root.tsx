@@ -9,18 +9,19 @@ import {
   SolflareWalletAdapter,
   TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
-import {
-  WalletModalProvider,
-  WalletMultiButton,
-} from '@solana/wallet-adapter-react-ui';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
 import '../App.css';
-import { App } from './App';
+// import { App } from './App';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Balance } from './Balance';
+
 import { NETWORK } from '@/data/network';
+import { Hero } from './landing/Hero';
+import { Header } from './Header';
+import { Companies } from './landing/Companies';
+import { Stats } from './landing/Stats';
 
 const queryClient = new QueryClient();
 
@@ -56,20 +57,13 @@ export const Root = () => {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <QueryClientProvider client={queryClient}>
-            <div className="min-h-screen text-white flex flex-col">
-              <header>
-                <nav className="flex items-center justify-between p-4">
-                  <span className="text-2xl font-semibold pl-2">Logo</span>
+            <div className="min-h-dvh text-white selection:bg-sol-green-400 selection:text-black">
+              {/* <App /> */}
+              <Header />
 
-                  <div className="flex gap-2 items-center justify-center">
-                    <Balance mintAddress="FHr3nCqWERMXcAb2osGx3Q9xascZj2iqyYDnygV4YsY" />
-                    <Balance />
-                    <WalletMultiButton />
-                  </div>
-                </nav>
-              </header>
-
-              <App />
+              <Hero />
+              <Companies />
+              <Stats />
             </div>
           </QueryClientProvider>
         </WalletModalProvider>
