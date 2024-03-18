@@ -47,16 +47,14 @@ export const Root = () => {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <QueryClientProvider client={queryClient}>
-            <div className="min-h-dvh text-white">
-              <Header />
-              <Hero />
-              <Companies />
-              <Stats />
-              <LiveData />
-              <CaseStudies />
-              <CallToAction />
-              <Footer />
-            </div>
+            <Header />
+            <Hero />
+            <Companies />
+            <Stats />
+            <LiveData />
+            <CaseStudies />
+            <CallToAction />
+            <Footer />
           </QueryClientProvider>
         </WalletModalProvider>
       </WalletProvider>

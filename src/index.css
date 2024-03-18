@@ -45,3 +45,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
+
+body {
+  @apply text-white bg-black;
+}
