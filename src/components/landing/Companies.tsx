@@ -13,7 +13,7 @@ export const Companies = () => {
 
   return (
     <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-20 flex flex-col gap-8 py-8 sm:py-12">
-      <p className="text-eyebrow text-center font-mono font-light uppercase text-xs sm:text-sm">
+      <p className="text-eyebrow text-center font-mono uppercase text-xs sm:text-sm">
         Powering tools and integrations from companies all around the world
       </p>
       <div className="flex flex-wrap justify-center gap-4 sm:gap-8">

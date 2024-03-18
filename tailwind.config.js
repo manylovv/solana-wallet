@@ -2,11 +2,39 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      sans: ['Diatype', 'sans-serif'],
-      mono: ['ABCDiatype Mono', 'monospace'],
-    },
     extend: {
+      fontSize: {
+        'display-2xl': [
+          '6rem',
+          {
+            letterSpacing: '-0.02em',
+            lineHeight: '6rem',
+          },
+        ],
+        'display-xl': [
+          '4.5rem',
+          {
+            letterSpacing: '-0.02em',
+            lineHeight: '4.75rem',
+          },
+        ],
+        'display-lg': [
+          '3.5rem',
+          {
+            lineHeight: '3.75rem',
+            letterSpacing: '-0.02em',
+          },
+        ],
+        'display-md': [
+          '2.625rem',
+          {
+            lineHeight: '2.875rem',
+            letterSpacing: '-0.02em',
+          },
+        ],
+        'display-sm': ['1.75rem', '2.0625rem'],
+        'display-xs': ['1.5rem', '1.75rem'],
+      },
       colors: {
         eyebrow: 'rgb(100 169 242)',
         'sol-purple': {
@@ -45,7 +73,16 @@ export default {
           'linear-gradient(100.51deg, #f087ff 27.61%, #6e1fce 62.14%, rgba(110, 31, 206, .1) 113.78%)',
         'gradient-mono-green':
           'linear-gradient(97.65deg,#19fb9b 11.36%,#199890 54.3%,#005f59 100.78%)',
+        'gradient-black-card': 'linear-gradient(1turn,#000,transparent)',
+        'gradient-cta-card':
+          'linear-gradient(213deg, hsla(0, 0%, 100%, .03), hsla(0, 0%, 100%, .05) 49.48%, hsla(0, 0%, 100%, .03))',
+        'gradient-footer':
+          'radial-gradient(farthest-side at bottom left, #271d3b, transparent 900px), radial-gradient(farthest-corner at bottom right, #3a233f, transparent 1000px)',
       },
+    },
+    fontFamily: {
+      sans: 'Diatype, sans-serif',
+      mono: 'Diatype Mono, monospace',
     },
   },
   plugins: [],

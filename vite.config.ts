@@ -14,11 +14,11 @@ export default defineConfig({
         families: [
           {
             name: 'Diatype',
-            src: './src/assets/fonts/diatype/*.woff2',
+            src: './src/assets/fonts/ABCDiatype/*.woff2',
           },
           {
-            name: 'ABCDiatype Mono',
-            src: './src/assets/fonts/diatype-mono/*.woff2',
+            name: 'Diatype Mono',
+            src: './src/assets/fonts/ABCDiatypeSemi-Mono/*.woff2',
           },
         ],
       },
